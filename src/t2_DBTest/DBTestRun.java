@@ -19,6 +19,7 @@ public class DBTestRun {
 		System.out.println("DB 처리 작업끝..입니다.....");
 		
 		// DB Close처리
+		dbTest.rsClose();
 		dbTest.dbClose();
 		
 		scanner.close();

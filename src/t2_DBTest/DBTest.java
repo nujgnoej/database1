@@ -64,6 +64,25 @@ public class DBTest {
 		}
 	}
 	
+	// stmt객체 Close
+	public void stmtClose() {
+		if(stmt != null) {
+			try {
+				stmt.close();
+			} catch (SQLException e) {}
+		}
+	}
+	
+	// rs객체 close
+	public void rsClose() {
+		if(rs != null) {
+			try {
+				rs.close();
+				stmtClose();
+			} catch (SQLException e) {}
+		}
+	}
+	
   // 데이터베이스객체 Close 
 	public void dbClose() {
 		try {
